@@ -13,7 +13,7 @@ options(bspm.version.check=FALSE)
 shell_call("rm add_cranapt_jammy.sh")
 
 shell_call("apt install git")
-shell_call("git clone git@github.com:me315-unicamp/prova_colab.git")
+shell_call("git clone https://github.com/me315-unicamp/prova_colab.git")
 shell_call("mv prova_colab/q01 .")
 shell_call("rm -fr prova_colab")
 
