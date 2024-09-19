@@ -4,6 +4,8 @@ shell_call <- function(command, ...) {
   cat(paste0(result, collapse = "\n"))
 }
 
+Sys.sleep(runif(1, 0, 15))
+
 download.file("https://github.com/eddelbuettel/r2u/raw/master/inst/scripts/add_cranapt_jammy.sh",
               "add_cranapt_jammy.sh")
 Sys.chmod("add_cranapt_jammy.sh", "0755")
@@ -13,6 +15,8 @@ options(bspm.version.check=FALSE)
 shell_call("rm add_cranapt_jammy.sh")
 
 shell_call("apt install git")
+
+Sys.sleep(runif(1, 0, 15))
 shell_call("git clone https://github.com/me315-unicamp/prova_colab.git")
 shell_call("mv prova_colab/q01 .")
 shell_call("rm -fr prova_colab")
